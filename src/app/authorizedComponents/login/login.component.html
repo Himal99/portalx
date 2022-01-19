@@ -1,1 +1,91 @@
-<p>login works!</p>
+<div class="pt-4">
+  <div class="row">
+    <div class="col-md-6">
+<!--      -->
+      <div class="pt-5">
+        <div>
+          <div class="row">
+            <div>
+              <div>
+                <div class="login_container">
+                  <div class="login-wrap p-4 p-md-5">
+                    <div class="d-flex">
+                      <div class="w-100">
+                        <h1 class="mb-4 text-center"><b>Sign In</b></h1>
+                      </div>
+                    </div>
+                    <form
+                      class="signin-form"
+                    >
+                      <div class="form-group mt-3">
+                        <input
+                          type="text"
+                          id="username-field"
+                          formControlName="username"
+                          name="username"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color:#3f51b5 ">Mobile Number</label>
+
+                      </div>
+                      <div class="form-group">
+                        <input
+                          id="password-field"
+                          type="password"
+                          name="password"
+                          formControlName="password"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" for="password">Password</label>
+
+                      </div>
+                      <div class="form-group">
+                        <button
+                          type="submit"
+                          style="background-color: #3f51b5; color: white"
+                          class="form-control btn  rounded submit px-3"
+                          (click)="homePage()"
+                        >
+                          Sign In
+                        </button>
+
+                      </div>
+                      <div class="text-center">
+                        <span class="text-center">Don't have an account? <a href="" style="text-decoration: none">Sign In</a></span>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <img src="assets/images/logIn.png" height="500" width="500">
+    </div>
+    <div class="text-center">
+      <div class="col-sm-12">
+        <footer id="footer">
+          <div class="container">
+            <div class="copyright">
+              Copyright © {{ 2022 }}. All Rights Reserved
+            </div>
+            <div class="credits">
+              Powered by
+              <a href="javascript:void(0)" class="text-decoration-none">Himal & Company</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

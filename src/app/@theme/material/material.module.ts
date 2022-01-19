@@ -23,7 +23,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule
   ]
 })
 export class MaterialModule {

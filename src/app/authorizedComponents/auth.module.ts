@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
-import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-import { AuthComponent } from './auth/auth.component';
+import {AuthRoutingModule} from './auth-routing.module';
+import {LoginComponent} from './login/login.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
+import {ForgetPasswordComponent} from './forget-password/forget-password.component';
+import {AuthComponent} from './auth/auth.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { AuthComponent } from './auth/auth.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MatIconModule
   ]
 })
-export class AuthModule { }
+export class AuthModule {
+}
