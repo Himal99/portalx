@@ -1,1 +1,217 @@
-<p>sign-up works!</p>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Dongle:wght@700&display=swap');
+</style>
+<div class="pt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <!--      -->
+      <div class="pt-5">
+
+        <div>
+          <div class="row">
+            <div>
+              <div>
+                <div class="login_container">
+
+                  <div class="login-wrap p-4 p-md-5">
+                    <span *ngIf="progressNumber>1">
+                      <mat-icon (click)="backProgress()" style="font-weight: bold" class="cursor">keyboard_return</mat-icon>
+                    </span>
+                    <div class="d-flex">
+                      <div class="w-100">
+                        <h1 class="mb-4 text-center"
+                            style="font-family: 'Dongle', sans-serif;"><b
+                          style="font-size: 60px">Sign Up</b></h1>
+                      </div>
+                    </div>
+                    <div>
+                      <label  style="float: right">{{progressNumber}} of 5</label>
+                        <mat-progress-bar mode="determinate" [value]="progressPercent"></mat-progress-bar>
+                    </div>
+                    <form [formGroup]="signUpForm">
+                      <div class="form-group mt-5" *ngIf="progressNumber !== 3 && progressNumber <=2">
+                        <input
+                          type="text"
+                          id="username-field"
+                          formControlName="phone"
+                          name="username"
+                          class="form-control"
+                          required
+
+                        />
+                        <label class="form-control-placeholder" style="color:#3f51b5 ">Mobile Number</label>
+
+                      </div>
+                    <div *ngIf="progressNumber === 4" class="pt-5">
+                      <div class="form-group">
+                        <input
+                          formControlName="userName"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" >User Name</label>
+                      </div>
+                      <div class="form-group">
+                        <input
+                          formControlName="email"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" >Email</label>
+                      </div>
+                      <div class="form-group">
+
+                        <input
+                          type="text"
+                          formControlName="patchedPhone"
+                          class="form-control"
+                          style="background-color: #D0D1D3"
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" >Phone No</label>
+                      </div>
+                    </div>
+
+                    <div *ngIf="progressNumber === 5" class="pt-5">
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          formControlName="password"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" >Password</label>
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          formControlName="confirmPassword"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" >Confirm Password</label>
+                      </div>
+                    </div>
+
+                     <div *ngIf="progressNumber === 2">
+                       <div class="form-group">
+                         <input
+                           id="password-field"
+                           type="password"
+                           formControlName="otp"
+                           class="form-control"
+                           required
+                         />
+                         <label class="form-control-placeholder" style="color: #3f51b5" >OTP</label>
+
+                         <div class="text-center pt-2">
+                           <span class="text-center">Didn't received? <a href="javascript:void(0)" class="text-decoration-none">Resend</a> in 59 sec</span>
+                         </div>
+
+                       </div>
+                      </div>
+                    </form>
+<div class="text-center" *ngIf="progressNumber===3">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="202" viewBox="0 0 380 202">
+    <defs>
+      <filter id="Rectangle_1483" x="0" y="38" width="184" height="137" filterUnits="userSpaceOnUse">
+        <feOffset input="SourceAlpha"/>
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feFlood flood-opacity="0.161"/>
+        <feComposite operator="in" in2="blur"/>
+        <feComposite in="SourceGraphic"/>
+      </filter>
+      <filter id="Rectangle_1482" x="196" y="38" width="184" height="137" filterUnits="userSpaceOnUse">
+        <feOffset input="SourceAlpha"/>
+        <feGaussianBlur stdDeviation="3" result="blur-2"/>
+        <feFlood flood-opacity="0.161"/>
+        <feComposite operator="in" in2="blur-2"/>
+        <feComposite in="SourceGraphic"/>
+      </filter>
+    </defs>
+    <g id="Group_529" data-name="Group 529" transform="translate(-758 -226)">
+       <g id="Group_515" data-name="Group 515" transform="translate(9)" >
+        <g id="Group_513" data-name="Group 513" class="cursor" (click)="updateProgress()">
+          <g id="Group_508" data-name="Group 508" transform="translate(-202 -7)">
+            <g transform="matrix(1, 0, 0, 1, 951, 233)" filter="url(#Rectangle_1483)">
+              <rect id="Rectangle_1483-2" data-name="Rectangle 1483" width="166" height="119" rx="27" transform="translate(9 47)" fill="#fff"/>
+            </g>
+            <g id="person" transform="translate(1002.125 301.87)">
+              <path id="Path_988" data-name="Path 988" d="M29.163,52.256l6.479,19.052L38.9,60l-1.6-1.75a2.644,2.644,0,0,1-.479-2.761c.865-1.71,2.654-1.39,4.324-1.39,1.75,0,3.918-.333,4.464,1.863a2.89,2.89,0,0,1-.559,2.288L43.459,60l3.26,11.309,5.867-19.052c4.231,3.805,16.757,4.57,21.42,7.171a12.259,12.259,0,0,1,3.878,3.28,15.779,15.779,0,0,1,2.894,8.508l.971,6.207c-.239,2.515-1.663,3.965-4.477,4.184H4.477C1.663,81.393.239,79.943,0,77.421l.971-6.207a15.779,15.779,0,0,1,2.894-8.508,12.09,12.09,0,0,1,3.878-3.28c4.663-2.6,17.189-3.366,21.42-7.171ZM26.23,24.988a3.514,3.514,0,0,0-1.823.479,1.477,1.477,0,0,0-.526.605,2.17,2.17,0,0,0-.173.971,8.67,8.67,0,0,0,1.723,4.2l.013.027h0l3.619,5.761a30.85,30.85,0,0,0,4.863,6.393,9.935,9.935,0,0,0,6.945,2.794,10.217,10.217,0,0,0,7.344-2.92,32.187,32.187,0,0,0,5.009-6.832L57.3,29.745c.758-1.736,1.038-2.894.865-3.579-.106-.406-.552-.605-1.31-.639-.16-.007-.326-.007-.5-.007s-.373.02-.572.033a1.218,1.218,0,0,1-.313-.02,5.783,5.783,0,0,1-1.118-.06l1.4-6.18C48.3,19.2,43.193,17.9,37.159,14.045c-1.982-1.264-2.581-2.714-4.563-2.574a6.719,6.719,0,0,0-3.759,2.036,9.749,9.749,0,0,0-2.155,4.244l.792,7.284a5.854,5.854,0,0,1-1.244-.047Zm32.024-1.3a2.615,2.615,0,0,1,1.909,1.976c.293,1.144-.027,2.747-.991,4.943h0l-.06.12-4.124,6.8a33.673,33.673,0,0,1-5.362,7.264,12.18,12.18,0,0,1-8.741,3.472,11.9,11.9,0,0,1-8.322-3.333,32.385,32.385,0,0,1-5.222-6.812l-3.619-5.754A10.564,10.564,0,0,1,21.666,27.1a4.2,4.2,0,0,1,.353-1.883,3.47,3.47,0,0,1,1.244-1.444,4.179,4.179,0,0,1,.878-.446,91.973,91.973,0,0,1-.173-10.351,14.026,14.026,0,0,1,.446-2.348,13.851,13.851,0,0,1,6.12-7.8,16.778,16.778,0,0,1,3.293-1.6C40.778-1.295,50,.082,54.934,5.418a14.07,14.07,0,0,1,3.546,8.874l-.226,9.4Z" fill="#1b5ca7" fill-rule="evenodd"/>
+            </g>
+          </g>
+          <text id="Personal_Account" data-name="Employee Account" transform="translate(767 422)" fill="#707070" font-size="17" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Employee Account</tspan></text>
+        </g>
+        <g id="Group_514" data-name="Group 514" class="cursor" (click)="updateProgress()">
+          <g id="Group_509" data-name="Group 509" transform="translate(209 -7)">
+            <g transform="matrix(1, 0, 0, 1, 540, 233)" filter="url(#Rectangle_1482)">
+              <rect id="Rectangle_1482-2" data-name="Rectangle 1482" width="166" height="119" rx="27" transform="translate(205 47)" fill="#fff"/>
+            </g>
+            <g id="_2440463971582985690" data-name="2440463971582985690" transform="translate(778 287.839)">
+              <path id="Path_1407" data-name="Path 1407" d="M0,0H7.552V7.552H0Z" transform="translate(12.289 58.072)" fill="#8e978a"/>
+              <path id="Path_1406" data-name="Path 1406" d="M0,0H7.553V7.552H0Z" transform="translate(25.635 58.072)" fill="#8e978a"/>
+              <path id="Path_1408" data-name="Path 1408" d="M0,0H7.552V7.552H0Z" transform="translate(12.289 71.695)" fill="#8e978a"/>
+              <rect id="Rectangle_1479" data-name="Rectangle 1479" width="7.553" height="7.552" transform="translate(25.635 71.695)" fill="#8e978a"/>
+              <rect id="Rectangle_1480" data-name="Rectangle 1480" width="7.553" height="7.553" transform="translate(29.3 31.556)" fill="#8e978a"/>
+              <path id="Path_1409" data-name="Path 1409" d="M0,0H7.552V7.553H0Z" transform="translate(42.646 31.556)" fill="#8e978a"/>
+              <path id="Path_984" data-name="Path 984" d="M42.779,43.4H23.525V27.273L55.909,14.966V36.221H55.78V78.534a7.508,7.508,0,0,1,1.12-.684c1.14-.565,2.606-1.2,4.152-1.823V36.221l-.01-28.7L18.392,23.735V41.681H.982V95.637H51.688v-.059c0-.168.04-2.378.208-5.074H42.779ZM39.36,90.5H6.115V46.814H39.361Z" fill="#1b5ca7"/>
+              <path id="Path_985" data-name="Path 985" d="M120.472,103.459a4.532,4.532,0,0,0-2.44-3.286c-4.243-2.115-13.554-5.241-13.554-5.241h-.788l-2.548,3.4,2.389,16.527h17.8a98.547,98.547,0,0,0-.856-11.4Z" transform="translate(-22.026 -19.221)" fill="#1b5ca7"/>
+              <path id="Path_986" data-name="Path 986" d="M104.257,77.633l1.282-6.609a8.848,8.848,0,0,0-8.766-10.04H95.251a8.848,8.848,0,0,0-8.765,10.04l1.282,6.609a8.4,8.4,0,0,0,16.489,0Z" transform="translate(-18.785 -11.756)" fill="#1b5ca7"/>
+              <path id="Path_987" data-name="Path 987" d="M87.274,94.932s-9.312,3.126-13.554,5.241a4.532,4.532,0,0,0-2.44,3.286,98.559,98.559,0,0,0-.856,11.4h17.8l2.389-16.527-2.548-3.4Z" transform="translate(-15.271 -19.221)" fill="#1b5ca7"/>
+            </g>
+          </g>
+          <text id="Employeer_Account" data-name="Employeer Account" transform="translate(963 422)" fill="#707070" font-size="17" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Employer Account</tspan></text>
+        </g>
+      </g>
+    </g>
+  </svg>
+
+
+</div>
+                      <div *ngIf="progressNumber !== 3">
+                        <button
+                          style="background-color: #3f51b5; color: white"
+                          class="form-control btn  rounded  px-3"
+                          (click)="updateProgress()"
+                        >
+                         {{progressNumber<=4 ? ' Continue' : 'Continue & Submit'}}
+                        </button>
+
+                      </div>
+                      <div class="text-center" *ngIf="progressNumber === 1">
+                        <span class="text-center">Already have an account? <a href="" style="text-decoration: none"
+                        (click)="toLoginPage()">Sign In</a></span>
+                      </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <img src="assets/images/signInIcon.png" height="500" width="700">
+    </div>
+    <div class="text-center">
+      <div class="col-sm-12">
+        <footer id="footer">
+          <div class="container">
+            <div class="copyright">
+              Copyright © {{ 2022 }}. All Rights Reserved
+            </div>
+            <div class="credits">
+              Powered by
+              <a href="javascript:void(0)" class="text-decoration-none">Himal & Company</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+

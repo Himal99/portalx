@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from "./@theme/material/material.module";
 import {AuthModule} from "./authorizedComponents/auth.module";
 import {BaseModule} from "./@theme/baseLayout/base.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import {BaseModule} from "./@theme/baseLayout/base.module";
     BrowserAnimationsModule,
     MaterialModule,
     AuthModule,
-    BaseModule
+    BaseModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,8 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {ForgetPasswordComponent} from './forget-password/forget-password.component';
 import {AuthComponent} from './auth/auth.component';
 import {MatIconModule} from "@angular/material/icon";
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import {MatIconModule} from "@angular/material/icon";
   imports: [
     CommonModule,
     AuthRoutingModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule {
