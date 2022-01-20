@@ -1,14 +1,19 @@
-
 <p>
   <mat-toolbar color="primary">
-<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
-<!--      <mat-icon >menu</mat-icon>-->
-<!--    </button>-->
-    <img src="../../../../assets/images/faicon.png" height="60" width="70" alt="">
-    <span class="example-spacer"></span>
-    <button (click)="signInPage()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <b>Sign In</b>
-    </button>
+    <mat-toolbar-row>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button (click)="openToogleHeader()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="openSecHeader">
+<div class="input-group mb-3">
+  <input type="text" class="form-control form-control-lg" placeholder="Search Here">
+  <button type="submit" class="input-group-text btn-success"><i class="bi bi-search me-2"></i> Search</button>
+</div>
+    </mat-toolbar-row>
   </mat-toolbar>
 </p>
 

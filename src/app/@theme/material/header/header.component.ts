@@ -7,6 +7,7 @@ import {Router, RouterOutlet} from "@angular/router";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  openSecHeader: boolean = false;
 
   constructor(
     private router: Router
@@ -19,4 +20,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['auth/login'])
   }
 
+  openToogleHeader() {
+    if(this.openSecHeader){
+      this.openSecHeader = false
+    }else {
+      this.openSecHeader = true;
+    }
+  }
 }
