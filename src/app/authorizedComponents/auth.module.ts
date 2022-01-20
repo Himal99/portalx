@@ -9,7 +9,7 @@ import {AuthComponent} from './auth/auth.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -23,7 +23,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatIconModule,
     MatProgressBarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCheckboxModule
   ]
 })
 export class AuthModule {

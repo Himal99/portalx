@@ -15,11 +15,11 @@
 
                   <div class="login-wrap p-4 p-md-5">
                     <span *ngIf="progressNumber>1">
-                      <mat-icon (click)="backProgress()" style="font-weight: bold" class="cursor">keyboard_return</mat-icon>
+                      <mat-icon color="primary" (click)="backProgress()" style="font-weight: bold" class="cursor">keyboard_return</mat-icon>
                     </span>
                     <div class="d-flex">
                       <div class="w-100">
-                        <h1 class="mb-4 text-center text-black-50"
+                        <h1  class="mb-4 text-center text-black-50"
                             style="font-family: 'Dongle', sans-serif;"><b
                           style="font-size: 60px">Sign Up</b></h1>
                       </div>
@@ -28,7 +28,7 @@
                       <label  style="float: right">{{progressNumber}} of 5</label>
                         <mat-progress-bar mode="determinate" [value]="progressPercent"></mat-progress-bar>
                     </div>
-                    <form [formGroup]="signUpForm" class="was-validated">
+                    <form autocomplete="off" [formGroup]="signUpForm" class="was-validated">
                       <div class="form-group mt-5" *ngIf="progressNumber !== 3 && progressNumber <=2">
                         <input
                           type="text"
@@ -103,7 +103,7 @@
                        <div class="form-group">
                          <input
                            id="password-field"
-                           type="password"
+                           type="text"
                            formControlName="otp"
                            class="form-control"
                            required
@@ -184,6 +184,18 @@
                           <span style="float: right" *ngIf="progressNumber<=4"><mat-icon>forward</mat-icon></span>
                           <span style="float: right" *ngIf="progressNumber===5"><mat-icon>how_to_reg</mat-icon></span>
                         </button>
+                        <div class="col-md-12 text-center" *ngIf="progressNumber == 5">
+                          <div class="pt-3">
+                  <span>
+                   <mat-checkbox color="primary" class="example-margin">
+                      I accept
+                    <a href="javascript:void(0)">&nbsp;Terms of use</a> &
+                    <a href="javascript:void(0)"> Privacy Policy</a>
+                   </mat-checkbox>
+
+                  </span>
+                          </div>
+                        </div>
 
                       </div>
                       <div class="text-center pt-2" *ngIf="progressNumber === 1">
