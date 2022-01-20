@@ -8,6 +8,7 @@ import {MaterialModule} from "./@theme/material/material.module";
 import {AuthModule} from "./authorizedComponents/auth.module";
 import {BaseModule} from "./@theme/baseLayout/base.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AuthModule,
     BaseModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
