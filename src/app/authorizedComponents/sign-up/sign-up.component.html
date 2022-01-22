@@ -37,6 +37,7 @@
                           name="mobileNo"
                           class="form-control"
                           required
+                          (keyup)="checkValidation()"
 
                         />
                         <label class="form-control-placeholder" style="color:#3f51b5 ">Mobile Number</label>
@@ -179,6 +180,8 @@
                           style="background-color: #3f51b5; color: white"
                           class="form-control btn  rounded  px-3"
                           (click)="updateProgress()"
+                          [disabled]="disableButton"
+                          [style.cursor]="disableButton ? 'not-allowed' : 'pointer'"
                         >
                          {{progressNumber<=4 ? ' Continue' : 'Continue & Submit'}}
                           <span style="float: right" *ngIf="progressNumber<=4"><mat-icon>forward</mat-icon></span>

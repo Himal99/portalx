@@ -10,6 +10,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     LoginComponent,
@@ -24,7 +26,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatProgressBarModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ToastrModule.forRoot({
+      preventDuplicates: true,
+
+    })
   ]
 })
 export class AuthModule {
