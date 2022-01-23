@@ -1,8 +1,9 @@
 <p>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>My App</span>
+      <span style="cursor: pointer"  (click)="loginPage()">Sign out</span>
       <span class="example-spacer"></span>
+      <span>{{loggedInUserName}}</span>
       <button (click)="openToogleHeader()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>

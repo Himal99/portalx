@@ -41,6 +41,9 @@
 
                         />
                         <label class="form-control-placeholder" style="color:#3f51b5 ">Mobile Number</label>
+                          <span class="pt-1" *ngIf="form['phone'].invalid && (form['phone'].dirty || form['phone'].touched)"
+                                  style="color: #da4b27">mobile number is required*</span>
+
 
                       </div>
                     <div *ngIf="progressNumber === 4" class="pt-5">

@@ -10,6 +10,7 @@ import {BaseModule} from "./@theme/baseLayout/base.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
+import {FeatureModule} from "./feature/feature.module";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {ToastrModule} from "ngx-toastr";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

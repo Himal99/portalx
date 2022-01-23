@@ -8,12 +8,13 @@ import {Router, RouterOutlet} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
   openSecHeader: boolean = false;
-
+  loggedInUserName: any;
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.loggedInUserName = localStorage.getItem('loggedInUserName');
   }
 
   signInPage() {
@@ -26,5 +27,9 @@ export class HeaderComponent implements OnInit {
     }else {
       this.openSecHeader = true;
     }
+  }
+
+  loginPage() {
+    this.router.navigate(['login'])
   }
 }

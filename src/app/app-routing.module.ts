@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: ()=> import('./@theme/baseLayout/base.module').then(m => m.BaseModule),
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   }
 ];
 

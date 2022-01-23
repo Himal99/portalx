@@ -40,7 +40,7 @@ export class AlertService {
       {
         timeOut: 2000,
         positionClass: 'toast-bottom-right',
-        progressAnimation: 'decreasing'
+        progressAnimation: 'decreasing',
       })
   }
 }

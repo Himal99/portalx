@@ -20,10 +20,14 @@ export class ProfileService  extends BaseApiService<any> implements MasterServic
   }
 
   getAll(): Observable<any> {
-    return this.http.get(`${this.getApi()}/test`);
+    return this.http.get(`https://jsonplaceholder.typicode.com/posts`);
   }
 
   getById(id: number): Observable<any> {
     return this.http.get(`${this.getApi()}/test2`);
+  }
+
+  deleteById(id: number): Observable<any> {
+    return this.http.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
   }
 }
