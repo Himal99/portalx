@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './components/profile/profile.component';
-
+import { AddProfileComponent } from './components/addProfile/add-profile.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    ProfileComponent,
+    AddProfileComponent
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ]
 })
 export class ProfileModule { }

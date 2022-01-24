@@ -73,7 +73,7 @@ password: [undefined],
     })
       localStorage.setItem('demoAccount', JSON.stringify(this.demoAccount));
       this.toastr.showToasterInfo("successfully signed up");
-      this.router.navigate(['auth/login'])
+      this.router.navigate(['profile/add-profile'])
     }
     if(this.progressNumber === 3){
       this.signUpForm.get('patchedPhone')?.patchValue(this.signUpForm.get('phone')?.value);
