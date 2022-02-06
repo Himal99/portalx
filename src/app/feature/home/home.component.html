@@ -1,20 +1,202 @@
-<div class="container">
-<!--  <table class="table table-striped table-hover">-->
-<!--    <thead>-->
-<!--    <tr><th>Id</th>-->
-<!--    <th>Content</th>-->
-<!--    <th>title</th>-->
-<!--    <th>Action</th></tr>-->
-<!--    </thead>-->
-<!--    <tbody>-->
-<!--    <tr  *ngFor="let data of dummyData">-->
-<!--      <td>{{data?.id}}</td>-->
-<!--      <td>{{data?.body.substring(0,60).concat('.....')}}</td>-->
-<!--      <td>{{data?.title}}</td>-->
-<!--      <td><mat-icon style="cursor: pointer">edit</mat-icon>-->
-<!--        <mat-icon style="cursor: pointer" (click)="deleteData(data?.id)">delete_forever</mat-icon></td>-->
-<!--    </tr>-->
-<!--    </tbody>-->
-<!--  </table>-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Dongle:wght@700&display=swap');
+</style>
+
+<div class="header">
+
+  <div class="text-center" style="padding-top: 130px">
+    <h1 class="headerTitle" style="color: #F9F9F9;font-family: 'Dongle', sans-serif;
+font-size: 60px">Career Choices in <br> Building Components Manufacturing</h1>
+
+
+  </div>
+  <div class="container" style="padding-top: 40px; border: none">
+    <div class="card" style="border: none">
+      <div class="card-body" style="height: 100px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   border: none; background-color: #F9F9F9">
+
+        <div class="row">
+          <div class="col-md-5">
+            <input type="text" class="form-control"  placeholder="Search by skills, company & job title....">
+          </div>
+          <div class="col-md-6">
+            <input placeholder="Enter Location" type="text" class="form-control">
+          </div>
+         <div class="col-md-1 cursor">
+           <mat-icon style="font-size: 70px;
+  color: orange;">search</mat-icon>
+         </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container text-center pt-3">
+    <h1 style="font-family: 'Dongle', sans-serif;
+font-size: 50px">Popular Searches</h1>
+    <h3 class="text-black-50" style="font-weight: normal">
+      The jobline specializes in matching industry Professionals with Employers in the Engineered <br>
+      Wood Products, Truss, Wall Panel, and off-site construction industries.</h3>
+   <div class="row">
+     <div class="col-md-3">
+       <button style="width: 100%; background-color: #B6C5C2; border: none; height: 50px" type="button" class="btn btn-primary text-black-50">
+         Wood Products <span class="badge bg-secondary">58</span>
+       </button>
+     </div>
+     <div class="col-md-3">
+       <button style="width: 100%; background-color: #B6C5C2; border: none; height: 50px" type="button" class="btn btn-primary text-black-50">
+         Truss <span class="badge bg-secondary">20</span>
+       </button>
+     </div>
+     <div class="col-md-3">
+       <button style="width: 100%; background-color: #B6C5C2; border: none; height: 50px" type="button" class="btn btn-primary text-black-50">
+         Wall Panel <span class="badge bg-secondary">9</span>
+       </button>
+     </div>
+     <div class="col-md-3">
+       <button style="width: 100%; background-color: #B6C5C2; border: none; height: 50px" type="button" class="btn btn-primary text-black-50">
+         off-site construction <span class="badge bg-secondary">5</span>
+       </button>
+     </div>
+
+
+
+   </div>
+
+
+  </div>
+  <div class="container pt-4">
+      <div class="row">
+       <div class="col-md-2">
+         <mat-icon style="font-size: 50px !important; color: red !important;">whatshot</mat-icon>
+         <h1 style="float: right;font-family: 'Dongle', sans-serif;
+font-size: 55px;" class="pt-3">Hot Jobs</h1>
+       </div>
+        <div class="col-md-10 pt-3">
+          <p style="float: right; font-weight: bold; font-size: medium;color: orange">View All >></p>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <p style="float: right; color: green">NEW</p>
+            <h5 class="card-title" style="font-size: large"><b>Product Manager</b></h5>
+            <h5 style="float: right">EXP- <b>3 YRS</b></h5>
+            <h5 class="card-title text-black-50" style="font-size: small; font-weight: lighter">
+              <b>7L01- Mid Level</b></h5>
+
+            <hr>
+
+            <p class="card-text text-black-50">With below as a natural lead-in to additional content supporting text below as a natural lead-in to additional content.....</p>
+
+
+            <div class="row">
+              <div class="col-md-5">
+                <h3 style="color: orange; font-weight: inherit; font-size: medium">Apply Now
+                </h3>
+              </div>
+              <div class="col-md-1"></div>
+              <mat-icon style="float: right; color: orange">arrow_forward</mat-icon>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <p style="float: right; color: green">NEW</p>
+            <h5 class="card-title" style="font-size: large"><b>Software Engineer</b></h5>
+            <h5 style="float: right">EXP- <b>3 YRS</b></h5>
+            <h5 class="card-title text-black-50" style="font-size: small; font-weight: lighter">
+              <b>7L01- Mid Level</b></h5>
+
+            <hr>
+
+            <p class="card-text text-black-50">With below as a natural lead-in to additional content supporting text below as a natural lead-in to additional content.....</p>
+
+
+            <div class="row">
+              <div class="col-md-5">
+                <h3 style="color: orange; font-weight: inherit; font-size: medium">Apply Now
+                </h3>
+              </div>
+              <div class="col-md-1"></div>
+              <mat-icon style="float: right; color: orange">arrow_forward</mat-icon>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <p style="float: right; color: green">NEW</p>
+            <h5 class="card-title" style="font-size: large"><b>Web Developer</b></h5>
+            <h5 style="float: right">EXP- <b>3 YRS</b></h5>
+            <h5 class="card-title text-black-50" style="font-size: small; font-weight: lighter">
+              <b>7L01- Mid Level</b></h5>
+
+            <hr>
+
+            <p class="card-text text-black-50">With below as a natural lead-in to additional content supporting text below as a natural lead-in to additional content.....</p>
+
+
+            <div class="row">
+              <div class="col-md-5">
+                <h3 style="color: orange; font-weight: inherit; font-size: medium">Apply Now
+                </h3>
+              </div>
+              <div class="col-md-1"></div>
+              <mat-icon style="float: right; color: orange">arrow_forward</mat-icon>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <p style="float: right; color: red">HOT</p>
+            <h5 class="card-title" style="font-size: large"><b>Carpenter</b></h5>
+            <h5 style="float: right">EXP- <b>3 YRS</b></h5>
+            <h5 class="card-title text-black-50" style="font-size: small; font-weight: lighter">
+              <b>7L01- Mid Level</b></h5>
+
+            <hr>
+
+            <p class="card-text text-black-50">With below as a natural lead-in to additional content supporting text below as a natural lead-in to additional content.....</p>
+
+
+            <div class="row">
+              <div class="col-md-5">
+                <h3 style="color: orange; font-weight: inherit; font-size: medium">Apply Now
+                </h3>
+              </div>
+              <div class="col-md-1"></div>
+              <mat-icon style="float: right; color: orange">arrow_forward</mat-icon>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-light text-center text-lg-start pt-3">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      Powered By HD-Company
+    </div>
+    <!-- Copyright -->
+  </footer>
 
 </div>
+
+
+
+

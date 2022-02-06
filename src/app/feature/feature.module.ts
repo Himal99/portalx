@@ -5,6 +5,7 @@ import { FeatureRoutingModule } from './feature-routing.module';
 import { FeatureComponent } from './feature.component';
 import { HomeComponent } from './home/home.component';
 import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({

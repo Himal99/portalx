@@ -14,9 +14,10 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     HeaderComponent,
     FooterComponent
   ],
-  exports: [
-    HeaderComponent
-  ],
+    exports: [
+        HeaderComponent,
+        FooterComponent
+    ],
   imports: [
     CommonModule,
     MatSliderModule,

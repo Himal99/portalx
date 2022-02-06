@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     LoginComponent,
@@ -27,6 +28,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
+    HttpClientModule,
     ToastrModule.forRoot({
       preventDuplicates: true,
 

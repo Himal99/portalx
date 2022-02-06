@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
 import {AlertService} from "../../@core/alertService/alert.service";
+import {AuthService} from "../service/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -14,11 +15,13 @@ loginForm: FormGroup = new FormGroup({});
 localAccount: any;
   constructor(private router: Router,
               private formBuilder: FormBuilder,
-              private alert: AlertService) { }
+              private alert: AlertService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
-    localStorage.removeItem('portal-token')
     this.buildLoginForm();
+    localStorage.removeItem('portal-token')
+
   }
 
   buildLoginForm(): void{
@@ -29,25 +32,16 @@ localAccount: any;
   }
 
   logIn() {
-    // Using localStorage for user credential
-
-    this.localAccount = localStorage.getItem('demoAccount');
-    if( this.loginForm.get('name')?.value === 'admin' &&
-      this.loginForm.get('password')?.value === 'admin1234'){
-      localStorage.setItem('portal-token','1234PX');
-      localStorage.setItem('loggedInUserName', 'Super Admin');
-
+    const  data={
+      email: this.loginForm.get('name')?.value,
+      password: this.loginForm.get('password')?.value
     }
-    if(this.localAccount !== null){
-      JSON.parse(this.localAccount).forEach( (data: any)=>{
-        if(this.loginForm.get('name')?.value === data?.email && this.loginForm.get('password')?.value === data?.password){
-          localStorage.setItem('portal-token','1234PX');
-          localStorage.setItem('loggedInUserName', data?.username);
-        }
-      })
-    }
+    this.authService.login(data).subscribe(res=>{
+      localStorage.setItem('portal-token', res?.detail?.token);
+      localStorage.setItem('loggedInUserName', res?.detail?.email);
+    })
     if(localStorage.getItem('portal-token') === null){
-      this.alert.showError('Invalid Username of Password')
+      this.alert.showError('Invalid Username or Password')
     }
     this.router.navigate(['home'])
 

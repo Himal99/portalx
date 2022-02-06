@@ -4,6 +4,7 @@ import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "
 import {ToastrService} from "ngx-toastr";
 import {AlertService} from "../../@core/alertService/alert.service";
 import {J} from "@angular/cdk/keycodes";
+import {AuthService} from "../service/auth.service";
 
 @Component({
   selector: 'app-sign-up',
@@ -22,7 +23,8 @@ export class SignUpComponent implements OnInit {
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private toastr: AlertService
+    private toastr: AlertService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -41,7 +43,8 @@ export class SignUpComponent implements OnInit {
       patchedPhone: [undefined],
       otp: [undefined],
 password: [undefined],
-      confirmPassword: [undefined]
+      confirmPassword: [undefined],
+      userType: [undefined]
     })
   }
 
@@ -49,31 +52,38 @@ password: [undefined],
     this.router.navigate(['auth/login'])
   }
 
-  updateProgress() {
+  updateProgress(userType: number=0) {
     console.log(this.signUpForm.get('phone')?.value)
     if(this.progressNumber === 1 && this.signUpForm.get('phone')?.value === null){
       this.toastr.showToasterWarning("Phone number is required");
       return;
     }
     if(this.progressNumber === 5){
-   this.previousAcc = localStorage.getItem('demoAccount');
-   if(this.previousAcc !== null) {
-     JSON.parse(this.previousAcc).forEach((data: any) => {
-       this.demoAccount.push({
-         email: data?.email,
-         password: data?.password,
-         username: data?.username
-       })
-     })
-   }
-    this.demoAccount.push({
-      email: this.signUpForm.get('email')?.value,
-      password: this.signUpForm.get('password')?.value,
-      username: this.signUpForm.get('userName')?.value
-    })
-      localStorage.setItem('demoAccount', JSON.stringify(this.demoAccount));
-      this.toastr.showToasterInfo("successfully signed up");
-      this.router.navigate(['profile/add-profile'])
+   // this.previousAcc = localStorage.getItem('demoAccount');
+   // if(this.previousAcc !== null) {
+   //   JSON.parse(this.previousAcc).forEach((data: any) => {
+   //     this.demoAccount.push({
+   //       email: data?.email,
+   //       password: data?.password,
+   //       username: data?.username
+   //     })
+   //   })
+   // }
+   //  this.demoAccount.push({
+   //    email: this.signUpForm.get('email')?.value,
+   //    password: this.signUpForm.get('password')?.value,
+   //    username: this.signUpForm.get('userName')?.value
+   //  })
+   //    localStorage.setItem('demoAccount', JSON.stringify(this.demoAccount));
+
+      this.signUpForm.get('userType')?.patchValue(Number(userType));
+      this.authService.signUp(this.signUpForm.value).subscribe( resp=>{
+        console.log(resp)
+        this.toastr.showToasterInfo("successfully signed up");
+        this.router.navigate(['auth/login'])
+      })
+
+
     }
     if(this.progressNumber === 3){
       this.signUpForm.get('patchedPhone')?.patchValue(this.signUpForm.get('phone')?.value);
