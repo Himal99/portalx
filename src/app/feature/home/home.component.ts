@@ -10,7 +10,9 @@ import {AlertService} from "../../@core/alertService/alert.service";
 export class HomeComponent implements OnInit {
 
   dummyData: any;
-
+  showSearchPage: boolean = false;
+  showVacancyDetail: boolean= false;
+  showLandingPage: boolean = true;
   constructor(
     private profileService: ProfileService,
     private alert: AlertService
@@ -30,5 +32,22 @@ this.dummyData = res;
 this.profileService.deleteById(id).subscribe( res=>{
   this.alert.showSuccess('Successfully deleted')
 })
+  }
+
+  showSearchResult(){
+    this.showSearchPage= true;
+    this.showLandingPage = false;
+    this.showVacancyDetail = false;
+  }
+
+  changeEvent(event: boolean){
+    console.log(event)
+    this.showSearchPage =false;
+    this.showLandingPage = true;
+  }
+
+  detailPage($event: boolean) {
+    this.showVacancyDetail = $event;
+    this.showLandingPage = false;
   }
 }

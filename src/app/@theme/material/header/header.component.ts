@@ -32,4 +32,12 @@ export class HeaderComponent implements OnInit {
   loginPage() {
     this.router.navigate(['login'])
   }
+
+  userProfile(): void{
+    this.router.navigate(['/profile/user-profile'])
+  }
+
+  homePage() {
+    this.router.navigate(['/home'])
+  }
 }

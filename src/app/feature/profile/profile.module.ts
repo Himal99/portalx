@@ -7,6 +7,7 @@ import { AddProfileComponent } from './components/addProfile/add-profile.compone
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {ReactiveFormsModule} from "@angular/forms";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     ProfileRoutingModule,
     MatStepperModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
   ]
 })
 export class ProfileModule { }
