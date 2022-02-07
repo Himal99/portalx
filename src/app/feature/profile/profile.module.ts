@@ -8,6 +8,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatIconModule} from "@angular/material/icon";
+import {MatProgressBar, MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatIconModule} from "@angular/material/icon";
     MatStepperModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ]
 })
 export class ProfileModule { }
