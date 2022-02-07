@@ -1,9 +1,17 @@
 .header{
-  //background-image: url("../../../../../assets/images/13.png");
+  //background-image: url("../../../../../assets/images/impress.jpg");
   height: 300px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background-color: #E0E0E0;
+  background-color: #000000;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.rating mat-icon{
+  color: orange;
 }
