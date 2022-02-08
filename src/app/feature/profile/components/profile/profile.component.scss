@@ -1,3 +1,5 @@
+$pad: 2px;
+
 .header{
   //background-image: url("../../../../../assets/images/impress.jpg");
   height: 300px;
@@ -8,10 +10,16 @@
   background-color: #000000;
 }
 
+
 .cursor{
   cursor: pointer;
 }
 
 .rating mat-icon{
   color: orange;
+}
+
+.pro-div{
+  background-color: #F9F9F9;
+  border-top: none; border-bottom: none; border-left: none
 }
