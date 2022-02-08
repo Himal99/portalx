@@ -1,7 +1,14 @@
 
+@mixin globalStyle($padding-top: 0px, $padding-left: 0px, $color: white,
+$border: none, $box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px){
+  padding-top: $padding-top;
+  padding-left: $padding-left;
+  color: $color;
+  border: $border;
+  box-shadow: $box-shadow;
+}
 
-
-.header{
+.header {
   background-image: url("../../../assets/images/Careers.jpg");
   height: 300px;
   width: 100%;
@@ -10,18 +17,38 @@
 
 }
 
-
-
-.cursor{
+.cursor {
   cursor: pointer;
 }
 
-input{
+input {
   height: 60px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: #EFFAF8;
 }
 
-.headerTitle{
+.headerTitle {
 
+}
+.searchBarComponent{
+  height: 100px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none; background-color: #F9F9F9;position: inherit;
+}
+.searchBarContainer{
+  padding-top: 40px; border: none;
+}
+
+.coverPageContent{
+  padding-top: 130px;
+  h1{
+    color: #F9F9F9;font-family: 'Dongle', sans-serif;
+    font-size: 60px
+  }
+}
+
+
+
+mat-icon{
+  font-size: 70px;
+  color: orange;
 }

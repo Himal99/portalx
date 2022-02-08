@@ -1,19 +1,15 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bree+Serif&family=Dongle:wght@700&display=swap');
-</style>
 
-<div class="header">
 
-  <div class="text-center" style="padding-top: 130px">
-    <h1 class="headerTitle" style="color: #F9F9F9;font-family: 'Dongle', sans-serif;
-font-size: 60px">Career Choices in <br> Building Components Manufacturing</h1>
+<div class="header" id="pdfTable" #pdfTable>
+
+  <div class="text-center coverPageContent">
+    <h1 class="headerTitle">Career Choices in <br> Building Components Manufacturing</h1>
 
 
   </div>
-  <div class="container" style="padding-top: 40px; border: none;">
+  <div class="container searchBarContainer">
     <div class="card" style="border: none;position: inherit">
-      <div class="card-body" style="height: 100px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-   border: none; background-color: #F9F9F9;position: inherit">
+      <div class="searchBarComponent" class="card-body">
 
         <div class="row">
           <div class="col-md-5">
@@ -23,8 +19,7 @@ font-size: 60px">Career Choices in <br> Building Components Manufacturing</h1>
             <input placeholder="Enter Locations...." type="text" class="form-control">
           </div>
          <div class="col-md-1 cursor" (click)="showSearchResult()">
-           <mat-icon  style="font-size: 70px;
-  color: orange;">search</mat-icon>
+           <mat-icon>search</mat-icon>
          </div>
         </div>
 
@@ -33,20 +28,14 @@ font-size: 60px">Career Choices in <br> Building Components Manufacturing</h1>
   </div>
   <app-search-result-page (homeEvent)="changeEvent($event)" *ngIf="showSearchPage"></app-search-result-page>
   <app-employee-landing-page (vacancyDetail)="detailPage($event)" *ngIf="showLandingPage"></app-employee-landing-page>
-
   <app-vacancy-detail *ngIf="showVacancyDetail"></app-vacancy-detail>
 
 
-  <footer class="bg-light text-center text-lg-start pt-3">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      Powered By HD-Company
-    </div>
-    <!-- Copyright -->
-  </footer>
+<app-footer></app-footer>
 
 </div>
+
+
 
 
 

@@ -11,6 +11,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatProgressBar, MatProgressBarModule} from "@angular/material/progress-bar";
 import { CvUploadModalComponent } from './components/cv-upload-modal/cv-upload-modal.component';
 import {NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
+import {NgxFileDropModule} from "ngx-file-drop";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
     ReactiveFormsModule,
     MatIconModule,
     MatProgressBarModule,
+    NgxFileDropModule
 
   ]
 })

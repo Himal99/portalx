@@ -10,6 +10,8 @@ import { EmployeeLandingPageComponent } from './landingPage/employee-landing-pag
 import { SearchResultPageComponent } from './vacancySearchedResult/search-result-page/search-result-page.component';
 import { VacancyDetailComponent } from './vacancyDetail/vacancy-detail/vacancy-detail.component';
 import {MaterialModule} from "../@theme/material/material.module";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import {MaterialModule} from "../@theme/material/material.module";
     CommonModule,
     FeatureRoutingModule,
     MatIconModule,
-    MaterialModule
+    MaterialModule,
+    BrowserModule, FormsModule
   ]
 })
 export class FeatureModule { }

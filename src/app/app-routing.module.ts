@@ -19,7 +19,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-  path: 'profile', loadChildren:()=> import('./feature/profile/profile.module').then(m=>m.ProfileModule)
+  path: 'profile', loadChildren:()=> import('./feature/profile/profile.module').then(m=>m.ProfileModule),
+    canActivate: [AuthGuard]
   }
 ];
 
