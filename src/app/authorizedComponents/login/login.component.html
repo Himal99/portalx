@@ -1,1 +1,107 @@
-<p>login works!</p>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Dongle:wght@700&display=swap');
+</style>
+<div class="pt-4">
+  <div class="row">
+    <div class="col-md-6 pt-5">
+<!--      -->
+      <div class="pt-5">
+        <div>
+          <div class="row">
+            <div>
+              <div>
+                <div class="login_container">
+                  <div class="login-wrap p-4 p-md-5">
+                    <div class="d-flex">
+                      <div class="w-100">
+                        <h1 class="mb-4 text-center text-black-50"
+                        style="font-family: 'Dongle', sans-serif;"><b
+                        style="font-size: 60px;">Sign In</b></h1>
+                      </div>
+                    </div>
+                    <form
+                      class="signin-form"
+                      [formGroup]="loginForm"
+                    >
+                      <div class="form-group mt-3">
+                        <input
+                          type="text"
+                          id="username-field"
+                          formControlName="name"
+                          name="username"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color:#3f51b5 ">Mobile Number</label>
+
+                      </div>
+                      <div class="form-group">
+                        <input
+                          id="password-field"
+                          type="password"
+                          name="password"
+                          formControlName="password"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-control-placeholder" style="color: #3f51b5" for="password">Password</label>
+
+                      </div>
+                      <div>
+                        <button
+                          style="background-color: #3f51b5; color: white"
+                          class="form-control btn  rounded submit px-3"
+                          (click)="logIn()"
+                        >
+                          Sign In
+                        </button>
+<!--                        <p class="strike p-2 m_0">-->
+<!--                          <span>Or</span>-->
+<!--                        </p>-->
+<!--                        <button-->
+<!--                          style="background-color: #0D9A8C; color: white"-->
+<!--                          class="form-control btn  rounded  px-3"-->
+<!--                        >-->
+<!--                          <span style="float: left"><mat-icon>facebook</mat-icon></span>Sign in with facebook-->
+<!--                        </button>-->
+
+                      </div>
+                      <div class="text-center pt-2">
+                        <span class="text-center">Don't have an account? <a href="javascript:void(0)" style="text-decoration: none"
+                        (click)="toSignUpPage()">Sign Up</a></span>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <img src="assets/images/logIn.png" height="500" width="500">
+    </div>
+    <div class="text-center">
+      <div class="col-sm-12">
+        <footer id="footer">
+          <div class="container">
+            <div class="copyright">
+              Copyright © {{ 2022 }}. All Rights Reserved
+            </div>
+            <div class="credits">
+              Powered by
+              <a href="javascript:void(0)" class="text-decoration-none">Himal & Dipesh</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+<!--  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>-->
+
+</div>
+

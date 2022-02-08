@@ -13,10 +13,12 @@ path: '',
       path: '', redirectTo: 'login', pathMatch: 'full'
     },
     {
-      path: 'login', component: LoginComponent
+      path: 'login', component: LoginComponent,
+      data: {animation: 'LoginPage' }
     },
     {
-      path: 'signUp', component: SignUpComponent
+      path: 'signUp', component: SignUpComponent,
+      data: {animation: 'signUpPage' }
     },{
   path: 'forgot-password',
       component: ForgetPasswordComponent

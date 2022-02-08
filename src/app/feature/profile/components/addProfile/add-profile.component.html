@@ -1,0 +1,34 @@
+<div class="container">
+  <mat-stepper #stepper>
+    <mat-step >
+
+        <ng-template matStepLabel>Fill out your name</ng-template>
+
+
+        <div class="text-center pt-5 d-grid gap-2 col-2 mx-auto">
+          <button style="background-color: #3F51B5;"
+                  matStepperNext class="btn btn-primary btn-sm">Next</button>
+        </div>
+
+    </mat-step>
+    <mat-step >
+
+        <ng-template matStepLabel>Fill out your address</ng-template>
+      <div class="text-center pt-5 d-grid gap-2 col-2 mx-auto">
+        <button style="background-color: #3F51B5;"
+                matStepperNext class="btn btn-primary btn-sm">Next</button>
+      </div>
+
+
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious style="background-color: #3F51B5;" matStepperNext class="btn btn-primary btn-sm">Back</button>
+        <button mat-button (click)="stepper.reset()" style="background-color: #3F51B5;" matStepperNext class="btn btn-primary btn-sm">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+</div>

@@ -7,6 +7,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from "./@theme/material/material.module";
 import {AuthModule} from "./authorizedComponents/auth.module";
 import {BaseModule} from "./@theme/baseLayout/base.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastrModule} from "ngx-toastr";
+import {FeatureModule} from "./feature/feature.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +22,12 @@ import {BaseModule} from "./@theme/baseLayout/base.module";
     BrowserAnimationsModule,
     MaterialModule,
     AuthModule,
-    BaseModule
+    BaseModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

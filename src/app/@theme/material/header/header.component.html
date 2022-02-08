@@ -1,14 +1,43 @@
 
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon >menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p>
+ <div class="fixedHeader">
+   <mat-toolbar color="primary">
+     <mat-toolbar-row>
+       <span style="cursor: pointer; font-weight: lighter"  (click)="loginPage()">Sign out</span>&nbsp;<mat-icon>keyboard_tab</mat-icon>
+       <nav class="navbar navbar-expand-lg" style="padding-left: 500px">
+         <div class="container-fluid" style="color: white">
+           <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                 <a class="nav-link active" aria-current="page" (click)="homePage()" href="javascript:void(0)">Home</a>
+               </li>
+               <li class="nav-item">
+                 <a style="color:white;" class="nav-link" href="javascript:void(0)">Company</a>
+
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="javascript:void(0)">Jobs</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link disabled" href="javascript:void(0)" tabindex="-1" aria-disabled="true">Tool Box</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link disabled" href="javascript:void(0)" tabindex="-1" aria-disabled="true">Contact</a>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+
+       <span class="example-spacer"></span>
+       <span class="cursor"><img src="../../../../assets/images/navbarUser.png" width="38" height="35" alt="" style="border-radius: 60%"></span>
+       &nbsp;&nbsp;
+       <span class="cursor" style="font-weight: lighter" (click)="userProfile()">{{loggedInUserName}}</span>
+
+
+     </mat-toolbar-row>
+
+
+   </mat-toolbar>
+ </div>
+
 
