@@ -39,10 +39,15 @@ localAccount: any;
     this.authService.login(data).subscribe(res=>{
       localStorage.setItem('portal-token', res?.detail?.token);
       localStorage.setItem('loggedInUserName', res?.detail?.email);
+
+    }, e => {
+      if(localStorage.getItem('portal-token') === null){
+        this.alert.showError(e.error.message)
+        console.log(e)
+
+      }
     })
-    if(localStorage.getItem('portal-token') === null){
-      this.alert.showError('Invalid Username or Password')
-    }
+
     this.router.navigate(['home'])
 
   }

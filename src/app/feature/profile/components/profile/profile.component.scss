@@ -23,3 +23,18 @@ $pad: 2px;
   background-color: #F9F9F9;
   border-top: none; border-bottom: none; border-left: none
 }
+
+.fa{
+  color: #3F51B5;
+  cursor: pointer;
+}
+
+.cv{
+  .fa{
+    color: white !important;
+  }
+}
+
+.hidden{
+  display: none;
+}

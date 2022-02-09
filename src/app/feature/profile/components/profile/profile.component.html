@@ -35,9 +35,11 @@ font-size: 60px;" class="pt-2">Cover Photo Here</h1>
                 <button style="background-color: orange; border: none;
 font-weight: lighter" class="btn btn-success btn-sm">Add Profile Section</button>
              <button style="font-weight: lighter;border: none;
-margin-left: 10px; background-color: #3F51B5" class="btn btn-secondary btn-sm" (click)="uploadCv()">More....</button>
+margin-left: 10px; background-color: #3F51B5" class="btn btn-secondary btn-sm" (click)="uploadCv()">More...</button>
+             <button style="font-weight: lighter;border: none;
+margin-left: 10px; background-color: #007AFF" class="btn btn-success btn-sm cv" (click)="downloadAsPDF()">Download CV &nbsp; <span class="fa fa-download"></span></button>
 
-<!--             <button class="btn btn-success btn-sm" style="margin-left: 10px; border: none">CV</button>-->
+
 
 <!--               <mat-icon style="float: right; padding-right: 150px">remove_red_eye</mat-icon>-->
 
@@ -48,15 +50,20 @@ margin-left: 10px; background-color: #3F51B5" class="btn btn-secondary btn-sm" (
             <ul style="list-style: none">
               <li>
 
-                <span class="text-black-50" style="font-weight: lighter"><span style="font-weight: initial !important;">Education</span> :
+                <span class="text-black-50" style="font-weight: lighter"> <span class="fa fa-university"></span>
+                  &nbsp;&nbsp;<span style="font-weight: initial !important;">Education</span> :
                   Tribhuwan University, Nepal</span>
 
               </li>
               <li class="text-black-50 pt-2">
+                <span class="fa fa-mail-bulk"></span>
+                &nbsp;
                 bantawaheem35@gmail.com
               </li>
-              <li class="text-black-50">
-               <h3>9816*******</h3>
+              <li class="text-black-50 pt-2">
+                <span class="fa fa-phone"></span>
+                &nbsp;
+               9816*******
               </li>
               <li class="pt-2 rating">
                 <mat-icon>star</mat-icon>
@@ -124,55 +131,55 @@ margin-left: 10px; background-color: #3F51B5" class="btn btn-secondary btn-sm" (
 
 </div>
 
-<!--<div id="pdfTable" #pdfTable style="padding-top: 800px">-->
+<div id="pdfTable" class="hidden" #pdfTable style="padding-top: 800px">
 
-<!--  <div>-->
-<!--    <div class="row">-->
-<!--      <div class="col-md-3" style="border: groove; height: 100px; width: 100px; border-color: black;-->
-<!--margin-left: 125px; text-align: center">-->
-<!--        <h5 style="padding-top: 50px">User Photo</h5>-->
-<!--      </div>-->
-<!--      <div class="col-md-6">-->
-<!--        <span>Name : Himal <br> bantwaheem35@gmail.com <br> Software Developer-->
-<!--        <br>Sb Solutions Pvt.Ltd <br>-->
-<!--        98732****</span>-->
-<!--      </div>-->
-<!--    </div>-->
+  <div>
+    <div class="row">
+      <div class="col-md-3" style="border: groove; height: 100px; width: 100px; border-color: black;
+margin-left: 125px; text-align: center">
+        <h5 style="padding-top: 50px">User Photo</h5>
+      </div>
+      <div class="col-md-6">
+        <span>Name : Himal <br> bantwaheem35@gmail.com <br> Software Developer
+        <br>Sb Solutions Pvt.Ltd <br>
+        98732****</span>
+      </div>
+    </div>
 
-<!--  </div>-->
-<!--    <div class="container pt-2">-->
-<!--     <table class="table table-striped table-bordered">-->
-<!--       <thead>-->
-<!--       <tr>-->
-<!--         <th>Name</th>-->
-<!--         <th>Address</th>-->
-<!--          <th>Email</th>-->
-<!--         <th>Phone</th>-->
-<!--       </tr>-->
-<!--       </thead>-->
-<!--       <tbody>-->
-<!--       <tr><td>-->
-<!--         Himal-->
-<!--       </td>-->
-<!--       <td>-->
-<!--         Bhojpur, nepal-->
-<!--       </td> <td>jahs@gmail.com</td> <td>98878****</td></tr>-->
-<!--       <tr><td>-->
-<!--         Himal-->
-<!--       </td>-->
-<!--         <td>-->
-<!--           Bhojpur, nepal-->
-<!--         </td> <td>jahs@gmail.com</td> <td>98878****</td></tr>-->
-<!--       <tr><td>-->
-<!--         Himal-->
-<!--       </td>-->
-<!--         <td>-->
-<!--           Bhojpur, nepal-->
-<!--         </td> <td>jahs@gmail.com</td> <td>98878****</td></tr>-->
-<!--       </tbody>-->
-<!--     </table>-->
-<!--    </div>-->
-<!--  </div>-->
+  </div>
+    <div class="container pt-2">
+     <table class="table table-striped table-bordered">
+       <thead>
+       <tr>
+         <th>Name</th>
+         <th>Address</th>
+          <th>Email</th>
+         <th>Phone</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr><td>
+         Himal
+       </td>
+       <td>
+         Bhojpur, nepal
+       </td> <td>jahs@gmail.com</td> <td>98878****</td></tr>
+       <tr><td>
+         Himal
+       </td>
+         <td>
+           Bhojpur, nepal
+         </td> <td>jahs@gmail.com</td> <td>98878****</td></tr>
+       <tr><td>
+         Himal
+       </td>
+         <td>
+           Bhojpur, nepal
+         </td> <td>jahs@gmail.com</td> <td>98878****</td></tr>
+       </tbody>
+     </table>
+    </div>
+  </div>
 
 <!--<button (click)="downloadAsPDF()">Save CV</button>-->
 

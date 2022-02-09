@@ -4,12 +4,14 @@ import {CvUploadModalComponent} from "../cv-upload-modal/cv-upload-modal.compone
 import {FileSystemDirectoryEntry, FileSystemFileEntry, NgxFileDropEntry} from "ngx-file-drop";
 import {jsPDF} from "jspdf";
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  private items: any;
 
   constructor(private modal: NgbModal) { }
   name = 'Angular Html To Pdf ';
@@ -26,33 +28,34 @@ export class ProfileComponent implements OnInit {
   }
 
   public downloadAsPDF() {
-    const doc = new jsPDF('p', 'px', 'letter');
-    //
-    // const specialElementHandlers = {
-    //   '#editor': function (element: any, renderer: any) {
-    //     return true;
-    //   }
-    // };
-
+    let data: Array<any> = new Array;
+    let i = 1;
+  let  obj = {
+      nr: 'i',
+      codart: 'el.Code',
+      codvar: 'el.Var',
+      qty: 'el.Qty'
+    };
+    data.push(obj);
+    let header = ["nr", "codart", "codvar", "qty"];
+    let headerConfig = header.map(key => ({
+      'name': key,
+      'prompt': key,
+      'width': 50,
+      'align': 'center',
+      'padding': 0
+    }));
+    const pdf = new jsPDF();
+    pdf.setFont("calibri");
+    pdf.setFontSize(14);
+    pdf.text(`By ds`, 10, 5);
     // @ts-ignore
-    // const pdfTable = this.pdfTable.nativeElement;
-    //
-
-    // doc.fromHTML(pdfTable.innerHTML, 15, 15, {
-    //   width: 190,
-    //   'elementHandlers': specialElementHandlers
-    // });
-
-    // @ts-ignore
-    doc.html(document.getElementById('pdfTable'), {
-      callback: function (pdf) {
-        var iframe = document.createElement('iframe');
-        iframe.setAttribute('style', 'height:100%; width:500px');
-        document.body.appendChild(iframe);
-        iframe.src = pdf.output('datauristring');
-      }
-    });
-    doc.save('test.pdf');
+    pdf.table(10, 20, data, header, headerConfig);
+    try {
+      pdf.save(`sas.pdf`);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
 }
